@@ -62,15 +62,15 @@ def init():
 
 # Funzione di aggiornamento per ogni frame dell'animazione
 def update(frame):
-    trace1.set_data(x1[:frame], y1[:frame])
-    point1.set_data(x1[frame], y1[frame])
+    trace1.set_data([x1[max(0, frame - 250):frame]], [y1[max(0, frame - 250):frame]])
+    point1.set_data([x1[frame]], [y1[frame]])
 
-    trace2.set_data(x2[:frame], y2[:frame])
-    point2.set_data(x2[frame], y2[frame])
+    trace2.set_data([x2[max(0, frame - 250):frame]], [y2[max(0, frame - 250):frame]])
+    point2.set_data([x2[frame]], [y2[frame]])
 
     trace3.set_data(x3[:frame], y3[:frame])
     point3.set_data(x3[frame], y3[frame])
-    
+
     trace4.set_data(x4[:frame], y4[:frame])
     point4.set_data(x4[frame], y4[frame])
 
